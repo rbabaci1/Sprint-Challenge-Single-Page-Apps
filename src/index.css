@@ -32,6 +32,7 @@ main {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 header h1 {
@@ -48,4 +49,17 @@ header h1 {
 
 .welcome-page h1 {
   font-family: "Monaco";
+}
+
+.to-characters {
+  text-decoration: none;
+  padding: 8px 20px;
+  font-size: 20px;
+  color: rgb(29, 34, 59);
+  background: rgb(177, 99, 99);
+}
+
+.to-characters:hover {
+  background: rgb(92, 41, 41);
+  color: rgb(226, 219, 219);
 }

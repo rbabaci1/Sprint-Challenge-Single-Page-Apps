@@ -12,7 +12,9 @@ export default function WelcomePage() {
           alt="rick"
         />
 
-        <Link to="/characters">Characters</Link>
+        <Link to="/characters" className="to-characters">
+          Characters
+        </Link>
       </header>
     </section>
   );
