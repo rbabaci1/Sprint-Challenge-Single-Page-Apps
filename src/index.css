@@ -27,6 +27,7 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
+
 /*
 .main-img {
   display: block;
@@ -36,4 +37,13 @@ main {
 
 header h1 {
   text-align: center;
+}
+
+.welcome-page {
+  text-align: center;
+  border-top: 2px dashed silver;
+}
+
+.welcome-page h1 {
+  font-family: "Monaco";
 }
