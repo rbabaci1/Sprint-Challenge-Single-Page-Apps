@@ -38,9 +38,12 @@ header h1 {
   text-align: center;
 }
 
+.centered {
+  border-bottom: 2px dashed silver;
+}
+
 .welcome-page {
   text-align: center;
-  border-top: 2px dashed silver;
 }
 
 .welcome-page h1 {

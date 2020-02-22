@@ -9,7 +9,8 @@ export default function App() {
   return (
     <main>
       <Header />
-      <WelcomePage />
+
+      <Route path="/" component={WelcomePage} />
     </main>
   );
 }
