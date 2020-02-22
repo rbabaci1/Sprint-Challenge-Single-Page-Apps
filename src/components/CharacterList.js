@@ -21,7 +21,9 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      {/* {characters.map(character => )} */}
+      {characters.map(character => (
+        <CharacterCard character={character} />
+      ))}
     </section>
   );
 }
