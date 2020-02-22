@@ -19,7 +19,7 @@ export default function SearchForm({ characters, setSearchResult }) {
     <div>
       <section className="search-form">
         <label>
-          Search Characters
+          <span>Search Characters: </span>
           <input type="text" placeholder="Enter name" onChange={inputHandler} />
         </label>
       </section>
