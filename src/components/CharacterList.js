@@ -5,6 +5,7 @@ import CharacterCard from "./CharacterCard";
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
+  const [searchResult, setSearchResult] = useState([]);
   console.log(characters);
 
   useEffect(() => {
