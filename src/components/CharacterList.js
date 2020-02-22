@@ -16,7 +16,6 @@ export default function CharacterList() {
         setSearchResult(response.data.results);
       })
       .catch(error => console.error(error));
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
   return (

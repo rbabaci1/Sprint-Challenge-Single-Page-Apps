@@ -1,14 +1,6 @@
 import React from "react";
 
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button
-} from "reactstrap";
+import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 export default function CharacterCard({ character }) {
   return (
@@ -31,8 +23,6 @@ export default function CharacterCard({ character }) {
             <span>Number of episodes: </span>
             <p>{character.episode.length}</p>
           </CardSubtitle>
-
-          {/* <Button>Button</Button> */}
         </CardBody>
       </Card>
     </div>

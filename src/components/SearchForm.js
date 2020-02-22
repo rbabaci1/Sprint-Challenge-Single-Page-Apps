@@ -14,15 +14,12 @@ export default function SearchForm({ characters, setSearchResult }) {
     setSearchResult(results);
   }, [searchTerm]);
 
-  // console.log(characters);
   return (
-    <div>
-      <section className="search-form">
-        <label>
-          <span>Search Characters: </span>
-          <input type="text" placeholder="Enter name" onChange={inputHandler} />
-        </label>
-      </section>
-    </div>
+    <section className="search-form">
+      <label>
+        <span>Search Characters: </span>
+        <input type="text" placeholder="Enter name" onChange={inputHandler} />
+      </label>
+    </section>
   );
 }
