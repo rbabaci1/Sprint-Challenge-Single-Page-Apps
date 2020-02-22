@@ -8,13 +8,12 @@ export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
 
-  // console.log(characters);
-
   useEffect(() => {
     axios
       .get("https://rickandmortyapi.com/api/character/")
       .then(response => {
         setCharacters(response.data.results);
+        setSearchResult(response.data.results);
       })
       .catch(error => console.error(error));
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
@@ -22,14 +21,10 @@ export default function CharacterList() {
 
   return (
     <div>
-      <SearchForm
-        characters={characters}
-        searchResult={searchResult}
-        setSearchResult={setSearchResult}
-      />
+      <SearchForm characters={characters} setSearchResult={setSearchResult} />
 
       <section className="character-list">
-        {characters.map(character => (
+        {searchResult.map(character => (
           <CharacterCard character={character} key={character.id} />
         ))}
       </section>
