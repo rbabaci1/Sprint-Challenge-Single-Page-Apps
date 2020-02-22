@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm";
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
+  const [searchResult, setSearchResult] = useState([]);
 
-  console.log(characters);
+  // console.log(characters);
 
   useEffect(() => {
     axios
@@ -19,10 +21,18 @@ export default function CharacterList() {
   }, []);
 
   return (
-    <section className="character-list">
-      {characters.map(character => (
-        <CharacterCard character={character} key={character.id} />
-      ))}
-    </section>
+    <div>
+      <SearchForm
+        characters={characters}
+        searchResult={searchResult}
+        setSearchResult={setSearchResult}
+      />
+
+      <section className="character-list">
+        {characters.map(character => (
+          <CharacterCard character={character} key={character.id} />
+        ))}
+      </section>
+    </div>
   );
 }

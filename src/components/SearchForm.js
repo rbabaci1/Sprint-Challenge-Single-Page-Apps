@@ -1,7 +1,25 @@
 import React, { useState } from "react";
 
-export default function SearchForm() {
-  const [searchResult, setSearchResult] = useState([]);
+export default function SearchForm({
+  characters,
+  searchResult,
+  setSearchResult
+}) {
+  const [searchTerm, setSearchTerm] = useState("");
 
-  return <section className="search-form">// Add a search form here</section>;
+  const inputHandler = event => {
+    setSearchTerm(event.target.value);
+  };
+
+  console.log(searchTerm);
+
+  // console.log(characters);
+  return (
+    <section className="search-form">
+      <label>
+        Search Characters
+        <input type="text" placeholder="Enter name" onChange={inputHandler} />
+      </label>
+    </section>
+  );
 }
