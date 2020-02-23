@@ -11,7 +11,7 @@ export default function SearchForm({ characters }) {
   };
 
   useEffect(() => {
-    let results = characters.filter(character =>
+    const results = characters.filter(character =>
       character.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
