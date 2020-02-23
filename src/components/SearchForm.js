@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-import CharacterCard from "./CharacterCard";
+import CharacterCard from './CharacterCard';
 
-export default function SearchForm({ characters }) {
-  const [searchTerm, setSearchTerm] = useState("");
+const SearchForm = ({ characters }) => {
+  const [searchTerm, setSearchTerm] = useState('');
   const [searchResult, setSearchResult] = useState(characters);
 
   const inputHandler = event => {
@@ -20,18 +21,20 @@ export default function SearchForm({ characters }) {
 
   return (
     <div>
-      <section className="search-form">
+      <section className='search-form'>
         <label>
           <span>Search Characters: </span>
-          <input type="text" placeholder="Enter name" onChange={inputHandler} />
+          <input type='text' placeholder='Enter name' onChange={inputHandler} />
         </label>
       </section>
 
-      <section className="character-list">
+      <section className='character-list'>
         {searchResult.map(character => (
           <CharacterCard character={character} key={character.id} />
         ))}
       </section>
     </div>
   );
-}
+};
+
+export default SearchForm;

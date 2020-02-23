@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-import SearchForm from "./SearchForm";
+import SearchForm from './SearchForm';
 
-export default function CharacterList() {
+const CharacterList = () => {
   const [characters, setCharacters] = useState([]);
+
+  console.log(characters);
 
   useEffect(() => {
     axios
-      .get("https://rickandmortyapi.com/api/character/")
+      .get('https://rickandmortyapi.com/api/character/')
       .then(response => setCharacters(response.data.results))
       .catch(error => console.error(error));
   }, []);
@@ -18,4 +20,6 @@ export default function CharacterList() {
       <SearchForm characters={characters} />
     </div>
   );
-}
+};
+
+export default CharacterList;
