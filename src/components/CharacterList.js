@@ -6,8 +6,6 @@ import SearchForm from './SearchForm';
 const CharacterList = () => {
   const [characters, setCharacters] = useState([]);
 
-  console.log(characters);
-
   useEffect(() => {
     axios
       .get('https://rickandmortyapi.com/api/character/')
