@@ -6,9 +6,7 @@ const SearchForm = ({ characters }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResult, setSearchResult] = useState(characters);
 
-  const inputHandler = event => {
-    setSearchTerm(event.target.value);
-  };
+  const inputHandler = event => setSearchTerm(event.target.value);
 
   useEffect(() => {
     const results = characters.filter(character =>
